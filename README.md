@@ -18,10 +18,18 @@ npm install --save sveltestrap svelte
 </script>
 <Styles />
 ```
+and it into devdependancie of node. open `package.json`.
+
+```
+"devDependencies": {
+    "sveltestrap": "*.*.*",
+    ...
+  },
+```
 **Note:** This integration support only the bootstrap version supported by [Svletestrap](https://sveltestrap.js.org/?path=/story/components--get-started)
 
 ### **Install Bootstrap via npm or inclur Url in index.html**
-    
+
 
 
     
