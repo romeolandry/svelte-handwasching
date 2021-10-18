@@ -15,5 +15,5 @@
 </style>
 
 <div class="progress rounded-0 mb-3">
-    <div class="progress-bar" role="progressbar" style="width:{progress}%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{progress}%</div>
+    <div class="progress-bar" role="progressbar" style="width:{progress}%;" aria-valuenow="{progress}" aria-valuemin="0" aria-valuemax="100">{progress}%</div>
 </div>

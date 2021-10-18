@@ -1,24 +1,26 @@
 <script>
-import { Progress } from "sveltestrap";
-
+    import { Progress } from "sveltestrap";
+    import { createEventDispatcher, SvelteComponentTyped } from 'svelte';
     import ProgressBar from "./ProgressBar.svelte"
-    const totalSeconds= 25;
+    const totalSeconds= 20;
     let secondleft =  totalSeconds;
     let activeClick = '';
 
     $: progressvalue = ((totalSeconds - secondleft) / totalSeconds)*100;
 
+    const dispatch = createEventDispatcher();
      
     function startTimer(){
         activeClick = 'disabled';
         const timer = setInterval(() => {
             secondleft -=1;
-            if(secondleft==0){
+            if(secondleft<0){
+                dispatch('end');
                 clearInterval(timer);
                 activeClick = '';
                 secondleft = totalSeconds;
             }
-        }, 1000);
+        }, 100);
     };
 </script>
 
