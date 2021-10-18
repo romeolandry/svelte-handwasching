@@ -1,3 +1,9 @@
+<script>
+    export let progress = 0;
+
+
+</script>
+
 <style>
     .progress{
         margin: 20px ,0;
@@ -5,11 +11,9 @@
     }
     .progress-bar{
         background-color: rgb(77,199,55);
-        height: 100px;
-
     }
 </style>
 
 <div class="progress rounded-0 mb-3">
-    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+    <div class="progress-bar" role="progressbar" style="width:{progress}%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{progress}%</div>
 </div>
