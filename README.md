@@ -2,7 +2,26 @@
 
 Read th oficial documentation [hier](./official-docs.md).
 
-## Dependencies of this project
+## Bootstrap integration
 
-    - svelte: `npx degit svelte/template name-of-project`
+### **Using Sveltestarp**
+
+this integration don't require the installation of Bootstrap in the project. 
+
+```
+npm install --save sveltestrap svelte
+```
+- Integrate all bootstrap components in to the Project using into `app.svlete`
+```
+<script>
+  import { Styles } from 'sveltestrap';
+</script>
+<Styles />
+```
+**Note:** This integration support only the bootstrap version supported by [Svletestrap](https://sveltestrap.js.org/?path=/story/components--get-started)
+
+### **Install Bootstrap via npm or inclur Url in index.html**
+    
+
+
     
